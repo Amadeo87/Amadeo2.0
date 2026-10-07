@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТОВ «АМАДЕО ЛЕКС» — Юридична компанія</title>
+    <meta name="description" content="ТОВ «АМАДЕО ЛЕКС» — юридичний супровід бізнесу, військовослужбовців та громадян: військове право, пенсійні спори, корпоративне право, нерухомість.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#0f172a', 900: '#090d16', 950: '#05070e' },
+                        gold: { 400: '#f3e5ab', 500: '#d4af37', 600: '#aa820a' },
+                        leather: { 600: '#6b3e26', 800: '#3a2012', 900: '#23130a' }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa820a 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+        .gold-border-glow { box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); }
+        .gold-border-glow:hover { box-shadow: 0 0 25px rgba(212, 175, 55, 0.35); }
+        .bg-leather-texture {
+            background-color: #1a110b;
+            background-image: radial-gradient(#2d1c13 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+        .paper-card {
+            background: #fdfbf7;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4), inset 0 0 100px rgba(212, 175, 55, 0.03);
+        }
+        :focus-visible { outline: 2px solid #d4af37; outline-offset: 2px; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto !important; }
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-200 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <header class="fixed top-0 w-full z-40 bg-navy-900/90 backdrop-blur-md border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group" aria-label="АМАДЕО ЛЕКС — на початок">
+                <div class="w-10 h-10 rounded-lg border border-gold-500/40 bg-navy-800 flex items-center justify-center shadow-lg group-hover:border-gold-500 transition-all">
+                    <span class="font-serif text-2xl font-bold gold-gradient-text">A</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif text-lg font-bold tracking-wider text-slate-100 group-hover:text-gold-400 transition-colors">АМАДЕО ЛЕКС</span>
+                    <span class="text-[10px] tracking-widest text-gold-500/80 uppercase">Юридична компанія</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 text-sm font-medium" aria-label="Основна навігація">
+                <a href="#practices" class="text-slate-300 hover:text-gold-400 transition-colors">Практики</a>
+                <a href="#calculator" class="text-slate-300 hover:text-gold-400 transition-colors">Розрахунок справи</a>
+                <a href="#about" class="text-slate-300 hover:text-gold-400 transition-colors">Про компанію</a>
+                <a href="#contacts" class="text-slate-300 hover:text-gold-400 transition-colors">Контакти</a>
+            </nav>
+
+            <button type="button" onclick="openModal()" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-navy-950 font-semibold text-sm hover:brightness-110 transition-all shadow-md active:scale-95">
+                Консультація
+            </button>
+        </div>
+    </header>
+
+    <main>
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-leather-texture">
+        <div class="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-900/90 to-navy-950 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs font-medium">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <span>Офіційно зареєстровано • ТОВ «АМАДЕО ЛЕКС»</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-slate-100 leading-tight">
+                        Надійний правовий захист та <span class="gold-gradient-text">стратегічні рішення</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Комплексний юридичний супровід для бізнесу, військовослужбовців та громадян. Захищаємо ваші інтереси з безкомпромісною відданістю та глибокою аналітикою.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-lg bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 font-bold text-center hover:shadow-lg hover:shadow-gold-500/20 transition-all transform hover:-translate-y-0.5">
+                            Оцінити свою справу
+                        </a>
+                        <a href="#practices" class="w-full sm:w-auto px-8 py-4 rounded-lg border border-gold-500/40 text-slate-200 font-semibold text-center hover:border-gold-500 hover:text-gold-400 transition-all">
+                            Переглянути практики
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md paper-card rounded-2xl p-8 border-2 border-gold-500/30 text-navy-950 shadow-2xl">
+                        <div class="absolute -top-3 right-6 bg-navy-900 text-gold-400 border border-gold-500/40 px-3 py-1 rounded text-xs font-serif font-semibold">
+                            ТОВ «АМАДЕО ЛЕКС»
+                        </div>
+
+                        <div class="space-y-6 pt-2">
+                            <div class="border-b border-amber-900/10 pb-4">
+                                <div class="text-sm font-semibold uppercase tracking-wider text-slate-600">Ключовий показник</div>
+                                <!-- ПЕРЕВІРТЕ: цифра має бути підтверджена документально (реклама юридичних послуг) -->
+                                <div class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 mt-1">
+                                    Понад <span class="text-gold-600 font-extrabold">573</span> виграних справ
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4 pt-2">
+                                <div class="p-3 rounded-lg bg-amber-50 border border-amber-200/60">
+                                    <div class="text-2xl font-serif font-bold text-gold-600">100%</div>
+                                    <div class="text-xs text-slate-700 font-medium mt-1">Конфіденційність</div>
+                                </div>
+                                <div class="p-3 rounded-lg bg-amber-50 border border-amber-200/60">
+                                    <div class="text-2xl font-serif font-bold text-gold-600">з 2022</div>
+                                    <div class="text-xs text-slate-700 font-medium mt-1">Працюємо на ринку</div>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 text-xs text-slate-600 italic flex items-center gap-2">
+                                <i class="fa-solid fa-stamp text-gold-600 text-sm" aria-hidden="true"></i>
+                                <span>Зареєстровано в державному реєстрі України</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="practices" class="py-24 bg-navy-900 relative scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <p class="text-xs uppercase font-semibold tracking-widest text-gold-500">Напрямки діяльності</p>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100">Ключові правові практики</h2>
+                <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto"></div>
+            </div>
+
+            <div id="practiceGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-20 bg-navy-950 border-y border-gold-500/20 scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 space-y-3">
+                <p class="text-xs uppercase font-semibold tracking-widest text-gold-500">Інтерактивний онлайн-асистент</p>
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-slate-100">Попередній розрахунок справи</h2>
+                <p class="text-slate-400 text-sm">Дайте відповіді на кілька запитань для первинного оцінювання перспектив вашої справи</p>
+            </div>
+
+            <div class="bg-navy-900 border border-gold-500/30 rounded-2xl p-6 sm:p-10 shadow-xl">
+                <form id="calcForm" onsubmit="handleCalcSubmit(event)" class="space-y-6">
+
+                    <div>
+                        <label for="calcPractice" class="block text-sm font-medium text-slate-300 mb-2">Оберіть сферу питання:</label>
+                        <select id="calcPractice" name="practice" onchange="updateCalcEstimate()" class="w-full bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500">
+                            <option value="military">Військове право / Соціальний захист</option>
+                            <option value="pension">Перерахунок пенсії / Спори з ПФУ</option>
+                            <option value="business">Корпоративне право / Спори бізнесу</option>
+                            <option value="property">Нерухомість / єВідновлення / Майно на ТОТ</option>
+                        </select>
+                    </div>
+
+                    <fieldset>
+                        <legend class="block text-sm font-medium text-slate-300 mb-2">Складність справи / етап:</legend>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="border border-gold-500/20 bg-navy-800 p-3 rounded-lg flex items-center space-x-2 cursor-pointer hover:border-gold-500/50">
+                                <input type="radio" name="stage" value="consultation" checked onchange="updateCalcEstimate()" class="accent-gold-500">
+                                <span class="text-sm text-slate-200">Консультація</span>
+                            </label>
+                            <label class="border border-gold-500/20 bg-navy-800 p-3 rounded-lg flex items-center space-x-2 cursor-pointer hover:border-gold-500/50">
+                                <input type="radio" name="stage" value="pretrial" onchange="updateCalcEstimate()" class="accent-gold-500">
+                                <span class="text-sm text-slate-200">Досудове врегулювання</span>
+                            </label>
+                            <label class="border border-gold-500/20 bg-navy-800 p-3 rounded-lg flex items-center space-x-2 cursor-pointer hover:border-gold-500/50">
+                                <input type="radio" name="stage" value="court" onchange="updateCalcEstimate()" class="accent-gold-500">
+                                <span class="text-sm text-slate-200">Судовий процес</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="p-4 rounded-xl bg-gold-500/10 border border-gold-500/30 flex flex-col sm:flex-row justify-between items-center gap-4" aria-live="polite">
+                        <div>
+                            <span class="text-xs text-slate-400 block uppercase font-medium">Орієнтовний час опрацювання:</span>
+                            <span id="estimatedTime" class="text-lg font-serif font-bold text-gold-400"></span>
+                        </div>
+                        <div class="sm:text-right">
+                            <span class="text-xs text-slate-400 block uppercase font-medium">Рекомендована дія:</span>
+                            <span id="recommendedAction" class="text-sm font-semibold text-slate-100"></span>
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <input type="text" name="name" required autocomplete="name" aria-label="Ваше ім'я" placeholder="Ваше ім'я" class="bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500">
+                        <input type="tel" name="phone" required autocomplete="tel" aria-label="Телефон" placeholder="+380 (__) ___-__-__" class="bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500">
+                    </div>
+
+                    <label class="flex items-start gap-3 text-xs text-slate-400 cursor-pointer">
+                        <input type="checkbox" required class="accent-gold-500 mt-0.5">
+                        <span>Я погоджуюсь на обробку моїх персональних даних для зв'язку зі мною.</span>
+                    </label>
+
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+                    <p class="form-status text-sm min-h-[1.25rem]" role="status"></p>
+
+                    <button type="submit" class="w-full py-4 rounded-lg bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 text-navy-950 font-bold hover:brightness-110 transition-all shadow-lg">
+                        Отримати детальну оцінку справи
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-navy-900 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-xs uppercase font-semibold tracking-widest text-gold-500">Про ТОВ «АМАДЕО ЛЕКС»</p>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-100">Принципи, на яких будується довіра</h2>
+                    <p class="text-slate-300 leading-relaxed font-light">
+                        Компанія «АМАДЕО ЛЕКС» (зареєстрована 17.01.2022) поєднує високі стандарти класичної юридичної практики та сучасні підходи до розв'язання складних правових задач.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-100">Абсолютна конфіденційність</h3>
+                                <p class="text-slate-400 text-sm">Гарантія захисту комерційної та персональної таємниці клієнта.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 rounded bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 shrink-0 mt-1">
+                                <i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-slate-100">Глибока аналітика</h3>
+                                <p class="text-slate-400 text-sm">Детальний правовий аудит перед розробкою судової стратегії.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border border-gold-500/20 rounded-2xl p-8 bg-navy-800/40 space-y-6">
+                    <h3 class="text-xl font-serif font-bold text-gold-400">Як ми працюємо</h3>
+                    <ol class="space-y-5 text-sm text-slate-300">
+                        <li class="flex items-start gap-4">
+                            <span class="w-8 h-8 shrink-0 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 font-serif font-bold flex items-center justify-center">1</span>
+                            <div><p class="font-semibold text-slate-100">Заявка та первинна консультація</p><p class="text-slate-400 mt-1">Ви описуєте ситуацію, ми уточнюємо деталі та перелік необхідних документів.</p></div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-8 h-8 shrink-0 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 font-serif font-bold flex items-center justify-center">2</span>
+                            <div><p class="font-semibold text-slate-100">Аналіз та стратегія</p><p class="text-slate-400 mt-1">Вивчаємо документи, оцінюємо ризики й пропонуємо план дій.</p></div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-8 h-8 shrink-0 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 font-serif font-bold flex items-center justify-center">3</span>
+                            <div><p class="font-semibold text-slate-100">Договір і робота над справою</p><p class="text-slate-400 mt-1">Готуємо претензії, заяви або позов і представляємо ваші інтереси.</p></div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="w-8 h-8 shrink-0 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 font-serif font-bold flex items-center justify-center">4</span>
+                            <div><p class="font-semibold text-slate-100">Супровід до результату</p><p class="text-slate-400 mt-1">Інформуємо про кожен етап і допомагаємо з виконанням рішення.</p></div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer id="contacts" class="bg-navy-950 border-t border-gold-500/20 py-12 text-slate-400 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid md:grid-cols-3 gap-8 pb-8 border-b border-slate-800">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="font-serif text-2xl font-bold gold-gradient-text">A</span>
+                        <span class="font-serif font-bold text-slate-100">АМАДЕО ЛЕКС</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Юридичні послуги найвищого рівня. Захист інтересів у найскладніших спорах.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-slate-200 font-semibold mb-3">Контакти</h2>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-phone text-gold-500 mr-2" aria-hidden="true"></i><a href="tel:+380683509630" class="hover:text-gold-400">+380 68 350 96 30</a></li>
+                        <li><i class="fa-solid fa-envelope text-gold-500 mr-2" aria-hidden="true"></i><a href="mailto:amadeolex87@gmail.com" class="hover:text-gold-400">amadeolex87@gmail.com</a></li>
+                        <li><i class="fa-solid fa-location-dot text-gold-500 mr-2" aria-hidden="true"></i>Україна, м. Київ</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-slate-200 font-semibold mb-3">Години роботи</h2>
+                    <p class="text-sm">Пн — Пт: 09:00 – 18:00</p>
+                    <p class="text-sm">Сб — Нд: за попереднім записом</p>
+                </div>
+            </div>
+
+            <div class="text-xs text-slate-500">© 2026 ТОВ «АМАДЕО ЛЕКС». Усі права захищено.</div>
+        </div>
+    </footer>
+
+    <div id="consultModal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="bg-navy-900 border border-gold-500/40 rounded-2xl max-w-md w-full p-6 space-y-6 relative shadow-2xl">
+            <button type="button" onclick="closeModal()" aria-label="Закрити" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>
+            </button>
+            <h2 id="modalTitle" class="text-xl font-serif font-bold text-slate-100">Замовити консультацію</h2>
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <input type="text" id="modalPractice" name="practice" readonly aria-label="Напрямок" class="w-full bg-navy-800 border border-gold-500/20 rounded px-3 py-2 text-gold-400 text-sm font-medium">
+                <input type="text" id="modalName" name="name" required autocomplete="name" aria-label="Ваше ім'я" placeholder="Ваше ім'я" class="w-full bg-navy-800 border border-gold-500/30 rounded px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500 text-sm">
+                <input type="tel" name="phone" required autocomplete="tel" aria-label="Телефон" placeholder="Телефон" class="w-full bg-navy-800 border border-gold-500/30 rounded px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500 text-sm">
+                <textarea rows="3" name="message" aria-label="Опис проблеми" placeholder="Коротко опишіть проблему" class="w-full bg-navy-800 border border-gold-500/30 rounded px-4 py-3 text-slate-100 focus:outline-none focus:border-gold-500 text-sm"></textarea>
+                <label class="flex items-start gap-3 text-xs text-slate-400 cursor-pointer">
+                    <input type="checkbox" required class="accent-gold-500 mt-0.5">
+                    <span>Я погоджуюсь на обробку моїх персональних даних для зв'язку зі мною.</span>
+                </label>
+                <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+                <p class="form-status text-sm min-h-[1.25rem]" role="status"></p>
+                <button type="submit" class="w-full py-3 rounded bg-gradient-to-r from-gold-600 to-gold-500 text-navy-950 font-bold hover:brightness-110 transition-all text-sm">
+                    Надіслати запит
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const PRACTICES = [
+            { icon: 'building', title: 'Корпоративне право',
+              text: 'Реєстрація бізнесу, структурування партнерських угод, супровід M&A та комплексний захист корпоративних інтересів.' },
+            { icon: 'scale-balanced', title: 'Господарські спори',
+              text: 'Представництво в судах усіх інстанцій, вирішення договірних конфліктів, стягнення заборгованості та захист від рейдерства.' },
+            { icon: 'person-military-rifle', title: 'Військове право',
+              text: 'Консультації для військовослужбовців, оскарження рішень ВЛК, оформлення виплат та правовий захист у складних ситуаціях.' },
+            { icon: 'hand-holding-dollar', title: 'Пенсійні спори',
+              text: 'Перерахунок та підвищення пенсійних виплат військовим і цивільним особам через судові інстанції.' },
+            { icon: 'house-chimney-crack', title: 'Нерухомість та ТОТ',
+              text: 'Правовий захист майна на ТОТ, юридичний супровід державних програм «єВідновлення» та «єОселя».' },
+            { icon: 'file-contract', title: 'Правова експертиза',
+              text: 'Комплексна аналітика документів, аудит ризиків та стратегічне планування угоди перед підписанням.' }
+        ];
+
+        const grid = document.getElementById('practiceGrid');
+        PRACTICES.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'rounded-xl border border-gold-500/20 bg-navy-800/60 p-8 hover:border-gold-500/60 transition-all gold-border-glow group flex flex-col justify-between';
+            card.innerHTML = `
+                <div>
+                    <div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-navy-950 transition-all">
+                        <i class="fa-solid fa-${p.icon} text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-slate-100 mb-3">${p.title}</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">${p.text}</p>
+                </div>
+                <button type="button" class="text-gold-400 text-sm font-semibold inline-flex items-center gap-2 self-start">
+                    Замовити консультацію <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                </button>`;
+            card.querySelector('button').addEventListener('click', () => openModal(p.title));
+            grid.appendChild(card);
+        });
+
+        const modal = document.getElementById('consultModal');
+        let lastFocused = null;
+
+        function openModal(practiceName = 'Загальна консультація') {
+            lastFocused = document.activeElement;
+            document.getElementById('modalPractice').value = practiceName;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('modalName').focus();
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+            if (lastFocused) lastFocused.focus();
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+        });
+        modal.addEventListener('click', e => {
+            if (e.target === modal) closeModal();
+        });
+
+        const ESTIMATES = {
+            consultation: { time: '1 робочий день', action: {
+                military: 'Первинна консультація щодо виплат і рішень ВЛК',
+                pension: 'Аналіз пенсійної справи та розрахунку ПФУ',
+                business: 'Первинна правова експертиза документів',
+                property: 'Перевірка документів на майно та право на компенсацію' } },
+            pretrial: { time: '3–7 робочих днів', action: {
+                military: 'Підготовка скарг, рапортів і запитів',
+                pension: 'Підготовка звернення до ПФУ',
+                business: 'Підготовка претензій та вимог',
+                property: 'Підготовка заяв і збір підтверджуючих документів' } },
+            court: { time: 'Індивідуальний термін', action: {
+                military: 'Формування судової стратегії та позову',
+                pension: 'Позов про перерахунок пенсії',
+                business: 'Формування судової стратегії у господарському спорі',
+                property: 'Позов та представництво в суді' } }
+        };
+
+        function updateCalcEstimate() {
+            const practice = document.getElementById('calcPractice').value;
+            const stage = document.querySelector('input[name="stage"]:checked').value;
+            document.getElementById('estimatedTime').textContent = ESTIMATES[stage].time;
+            document.getElementById('recommendedAction').textContent = ESTIMATES[stage].action[practice];
+        }
+        updateCalcEstimate();
+
+        // Адреса серверної функції, яка пересилає заявку в Telegram (токен бота — тільки на сервері).
+        // Vercel: '/api/lead'  |  звичайний хостинг з PHP: 'send.php'
+        const LEAD_ENDPOINT = '/api/lead';
+
+        function setStatus(el, text, cls) {
+            el.textContent = text;
+            el.className = 'form-status text-sm min-h-[1.25rem] ' + cls;
+        }
+
+        async function sendLead(form, payload) {
+            const status = form.querySelector('.form-status');
+            const btn = form.querySelector('button[type="submit"]');
+            if (form.elements.website.value) return false; // пастка для ботів
+
+            try {
+                if (Date.now() - Number(localStorage.getItem('lastLead') || 0) < 30000) {
+                    setStatus(status, 'Заявку щойно надіслано. Спробуйте за хвилину.', 'text-amber-400');
+                    return false;
+                }
+            } catch (_) {}
+
+            btn.disabled = true;
+            setStatus(status, 'Надсилаємо…', 'text-slate-400');
+            try {
+                const res = await fetch(LEAD_ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                try { localStorage.setItem('lastLead', String(Date.now())); } catch (_) {}
+                setStatus(status, 'Дякуємо! Заявку прийнято, ми зв’яжемося з вами найближчим часом.', 'text-emerald-400');
+                return true;
+            } catch (err) {
+                setStatus(status, 'Не вдалося надіслати заявку. Зателефонуйте нам: +380 68 350 96 30', 'text-red-400');
+                return false;
+            } finally {
+                btn.disabled = false;
+            }
+        }
+
+        async function handleCalcSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const sel = form.elements.practice;
+            const ok = await sendLead(form, {
+                source: 'Калькулятор справи',
+                practice: sel.options[sel.selectedIndex].text,
+                stage: form.querySelector('input[name="stage"]:checked').parentElement.textContent.trim(),
+                estimate: document.getElementById('estimatedTime').textContent,
+                action: document.getElementById('recommendedAction').textContent,
+                name: data.get('name'),
+                phone: data.get('phone')
+            });
+            if (ok) {
+                const status = form.querySelector('.form-status').textContent;
+                form.reset();
+                updateCalcEstimate();
+                setStatus(form.querySelector('.form-status'), status, 'text-emerald-400');
+            }
+        }
+
+        async function handleModalSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const data = new FormData(form);
+            const ok = await sendLead(form, {
+                source: 'Форма консультації',
+                practice: data.get('practice'),
+                name: data.get('name'),
+                phone: data.get('phone'),
+                message: data.get('message')
+            });
+            if (ok) {
+                setTimeout(() => {
+                    closeModal();
+                    form.reset();
+                    setStatus(form.querySelector('.form-status'), '', '');
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
