@@ -8,7 +8,11 @@ const port = Number(process.env.PORT) || 3000;
 const host = process.env.HOST || "0.0.0.0";
 
 const server = http.createServer(async (req, res) => {
-  const pathname = new URL(req.url, `http://${req.headers.host || "localhost"}`).pathname;
+  const pathname =
+    new URL(req.url, `http://${req.headers.host || "localhost"}`).pathname.replace(
+      /\/+$/,
+      "",
+    ) || "/";
 
   if (pathname === "/api/lead") {
     return handleLead(req, res).catch((error) => {

@@ -887,7 +887,7 @@
       updateCalcEstimate();
 
       // Node.js сервер пересилає заявку в Telegram; токен зберігається тільки на сервері.
-      const LEAD_ENDPOINT = "/api/lead";
+      const LEAD_ENDPOINT = "https://amadeo2-0.onrender.com/api/lead";
 
       function setStatus(el, text, cls) {
         el.textContent = text;
@@ -900,8 +900,9 @@
         if (form.elements.website.value) return false; // пастка для ботів
 
         try {
+          const cooldownKey = `lastLead:${payload.source || "unknown"}`;
           if (
-            Date.now() - Number(localStorage.getItem("lastLead") || 0) <
+            Date.now() - Number(localStorage.getItem(cooldownKey) || 0) <
             30000
           ) {
             setStatus(
@@ -921,9 +922,20 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
           });
-          if (!res.ok) throw new Error("HTTP " + res.status);
+          const responseText = await res.text();
+          let response;
           try {
-            localStorage.setItem("lastLead", String(Date.now()));
+            response = JSON.parse(responseText);
+          } catch (_) {
+            response = null;
+          }
+          if (!res.ok) {
+            const detail =
+              response?.error || responseText.slice(0, 200) || "No response body";
+            throw new Error(`HTTP ${res.status}: ${detail}`);
+          }
+          try {
+            localStorage.setItem(cooldownKey, String(Date.now()));
           } catch (_) {}
           setStatus(
             status,

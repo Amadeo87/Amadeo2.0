@@ -40,6 +40,25 @@ function readField(payload, key) {
 }
 
 module.exports = async function handleLead(req, res) {
+  const allowedOrigin =
+    process.env.ALLOWED_ORIGIN || "https://amadeo87.github.io";
+  const requestOrigin = req.headers.origin;
+
+  res.setHeader("Vary", "Origin");
+  if (requestOrigin && requestOrigin !== allowedOrigin) {
+    return sendJson(res, 403, { error: "Origin not allowed" });
+  }
+
+  if (requestOrigin) {
+    res.setHeader("Access-Control-Allow-Origin", allowedOrigin);
+  }
+
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    return res.writeHead(204).end();
+  }
+
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return sendJson(res, 405, { error: "Method not allowed" });
@@ -98,7 +117,11 @@ module.exports = async function handleLead(req, res) {
     const telegramResult = await telegramResponse.json();
 
     if (!telegramResponse.ok || !telegramResult.ok) {
-      console.error("Telegram rejected a lead", telegramResponse.status);
+      console.error(
+        "Telegram rejected a lead",
+        telegramResponse.status,
+        telegramResult.description || "Unknown Telegram API error",
+      );
       return sendJson(res, 502, { error: "Could not deliver lead" });
     }
 
