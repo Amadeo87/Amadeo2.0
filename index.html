@@ -887,7 +887,12 @@
       updateCalcEstimate();
 
       // Node.js сервер пересилає заявку в Telegram; токен зберігається тільки на сервері.
-      const LEAD_ENDPOINT = "https://amadeo2-0.onrender.com/api/lead";
+      const isLocalServer = ["localhost", "127.0.0.1"].includes(
+        window.location.hostname,
+      );
+      const LEAD_ENDPOINT = isLocalServer
+        ? "/api/lead"
+        : "https://amadeo2-0.onrender.com/api/lead";
 
       function setStatus(el, text, cls) {
         el.textContent = text;
@@ -930,8 +935,9 @@
             response = null;
           }
           if (!res.ok) {
-            const detail =
-              response?.error || responseText.slice(0, 200) || "No response body";
+            const detail = response
+              ? [response.error, response.detail].filter(Boolean).join(": ")
+              : responseText.slice(0, 200) || "No response body";
             throw new Error(`HTTP ${res.status}: ${detail}`);
           }
           try {
